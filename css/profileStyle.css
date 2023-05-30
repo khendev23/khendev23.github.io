@@ -1,0 +1,30 @@
+.headBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 1520px;
+    height: 100px;
+}
+
+
+.headBar ul {
+    margin: 0;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+.headBar ul li {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.barList a {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+selection {
+    width: 1520px;
+    text-align: center;
+}

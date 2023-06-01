@@ -10,13 +10,13 @@ body, html {
 
 header {
     display: flex;
-    width: 1520px;
+    width: 1400px;
 }
 
 .logo {
     width: 300px;
     height: 100px;
-    padding: 30px;
+    padding: 30px 0 10px 50px;
 }
 
 .logo img {
@@ -147,11 +147,16 @@ selection {
 }
 
 .footer_box {
+    position: relative;
     width: 1520px;
+    justify-content: center;
     height: 100px;
     text-align: center;
     margin-top: 50px;
     padding-left: 80px;
+}
+.footer_box p {
+    padding-left: 100px;
 }
 
 /* ------------------------------------------------------------ */

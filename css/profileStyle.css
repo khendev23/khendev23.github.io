@@ -1,15 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 1400px;
+    margin: auto;
+}
 .headBar {
     display: flex;
     justify-content: flex-end;
-    width: 1520px;
+    width: 1200px;
     height: 100px;
+    margin: auto;
 }
 
 
 .headBar ul {
     margin: 0;
     padding-top: 30px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
 
 .headBar ul li {
@@ -17,6 +26,7 @@
     list-style-type: none;
     text-align: center;
     justify-content: center;
+    margin: 5px;
 }
 
 .barList a {
@@ -25,18 +35,89 @@
 }
 
 selection {
-    width: 1520px;
+    width: 1400px;
+    height: 1000px;
     text-align: center;
+    margin: auto;
+}
+
+selection h1 {
+    width: 1400px;
+    font-size: 70px;
+    margin: auto;
+    
+}
+
+.mainBox {
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50px;
+}
+.introductionMent {
+    margin: auto;
+    width: 1400px;
+    padding-top: 20px;
+    font-size: 24px;
 }
 
 .introductionBox {
-    float: left;
-    position: absolute;
+    width: 33.3%;
+    /* float: left; */
+    
 }
 
+.aboutTitle {
+    text-align: left;
+    float: left;
+    font-size: 24px;
+    margin-bottom: 30px;
+    
+}
+
+.aboutContent {
+    text-align: left;
+    float: left;
+    font-size: 18px;
+    margin: 0;
+    line-height: 2;
+}
+.imageBox {
+    width: 33.3%;
+    height: 500px;
+    align-items: center;
+    display: inline;
+    /* margin: 0 10px; */
+}
 .imageBox img{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     padding: 20px;
+    margin-top: 70px;
+}
+
+.detailBox {
+    width: 33.3%;
+    display: inline;
+}
+
+.aboutDetail {
+    text-align: left;
+    font-size: 24px;
+}
+
+.detailContents {
+    text-align: left;
+    line-height: 2.2;
+    font-size: 18px;
+}
+.footerbox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: gray;
+    margin: auto;
 }

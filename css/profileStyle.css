@@ -28,3 +28,15 @@ selection {
     width: 1520px;
     text-align: center;
 }
+
+.introductionBox {
+    float: left;
+    position: absolute;
+}
+
+.imageBox img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 20px;
+}

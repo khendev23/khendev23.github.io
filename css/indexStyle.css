@@ -2,31 +2,37 @@
     box-sizing: border-box;
 }
 
-body, html {
+/* body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-}
+} */
 
 header {
     display: flex;
     width: 1400px;
+    /* align-items: center;
+    justify-content: center; */
+    margin: auto;
 }
 
 .logo {
     width: 300px;
     height: 100px;
-    padding: 30px 0 10px 50px;
+    padding: 30px 0 10px 0;
+    float: left;
+    display: flex;
 }
 
 .logo img {
     height: 100px;
     max-width: 100%;
+    float: left;
 }
 
 nav {
     text-align: center;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     padding: 0;
 }
 
@@ -148,15 +154,15 @@ selection {
 
 .footer_box {
     position: relative;
-    width: 1520px;
+    width: 1400px;
     justify-content: center;
     height: 100px;
     text-align: center;
-    margin-top: 50px;
-    padding-left: 80px;
+    margin: auto;
+    padding-top: 30px;
 }
 .footer_box p {
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
 
 /* ------------------------------------------------------------ */

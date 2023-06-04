@@ -3,7 +3,7 @@
 }
 
 header {
-    width: 1400px;
+    max-width: 1400px;
     margin: auto;
 }
 .headBar {
@@ -117,6 +117,7 @@ selection h1 {
 .mainBox2 {
     width: 1400px;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
 }
 
@@ -127,11 +128,20 @@ selection h1 {
     margin-bottom: 30px;
 }
 
+.profile {
+    max-width: 1400px;
+    position: relative;
+}
 .pGray {
     width: 1400px;
     height: 50px;
     background-color: lightgray;
     display: flex;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 15px;
+    align-items: center;
 }
 
 .pWhite{
@@ -139,6 +149,36 @@ selection h1 {
     height: 50px;
     background-color: white;
     display: flex;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: left;
+    padding-left: 15px;
+    align-items: center;
+}
+
+#pWhite1 {
+    cursor: pointer;
+}
+
+#popup, #popup2 {
+    position: absolute;
+    /* opacity: 0; */
+    padding: 10px;
+    background-color: white;
+    transition: opacity 0.5s ease;
+    border-radius: 15px;
+}
+
+.popup-show {
+    opacity: 1;
+}
+
+.popup-hide {
+    opacity: 0;
+}
+
+#pGray2 {
+    cursor: pointer;
 }
 
 .footerbox {
@@ -148,4 +188,8 @@ selection h1 {
     height: 150px;
     background-color: gray;
     margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
 }

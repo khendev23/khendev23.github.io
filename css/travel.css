@@ -1,0 +1,69 @@
+header {
+    width: 1400px;
+    margin: auto;
+}
+.headBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+}
+
+
+.headBar ul {
+    margin: 0;
+    padding-top: 30px;
+    /* padding-right: 10px; */
+}
+
+.headBar ul li {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.barList a {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+section {
+    display: flex;
+    width: 1400px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.japan, .europe, .philipine {
+    border: 1px solid red;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    display: inline;
+}
+
+.japan {
+    margin-left: 920px;
+    margin-bottom: 260px;
+}
+
+.europe {
+    margin-left: 20px;
+    margin-bottom: 330px;
+}
+
+.philipine {
+    margin-left: 820px;
+    margin-bottom: 110px;
+}
+
+.worldMap img {
+    width: 1200px;
+    border-radius: 15px;
+}

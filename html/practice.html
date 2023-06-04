@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hover-container {
+  display: flex;
+}
+
+.hover-item {
+  margin-right: 10px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#popup {
+  position: absolute;
+  display: none;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+    </style>
+</head>
+<body>
+    <div id="hover-container">
+        <div class="hover-item" data-info="정보 1">아이템 1</div>
+        <div class="hover-item" data-info="정보 2">아이템 2</div>
+        <div class="hover-item" data-info="정보 3">아이템 3</div>
+      </div>
+      <div id="info-display"></div>
+
+      <script>
+       // 각 아이템 요소를 선택합니다.
+const hoverItems = document.querySelectorAll('.hover-item');
+
+// 팝업을 생성할 요소를 선택합니다.
+const hoverContainer = document.getElementById('hover-container');
+
+// 팝업 요소를 생성합니다.
+const popup = document.createElement('div');
+popup.id = 'popup';
+hoverContainer.appendChild(popup);
+
+// 각 아이템에 이벤트 리스너를 추가합니다.
+hoverItems.forEach(item => {
+  item.addEventListener('mouseover', (event) => {
+    // 마우스 오버 시 해당 아이템의 정보를 가져와서 팝업에 표시합니다.
+    const info = item.dataset.info;
+    popup.textContent = info;
+
+    // 팝업을 마우스 오버한 위치에 표시합니다.
+    popup.style.left = event.clientX + 'px';
+    popup.style.top = event.clientY + 'px';
+    popup.style.display = 'block';
+  });
+
+  item.addEventListener('mouseout', () => {
+    // 마우스가 아이템을 벗어나면 팝업을 숨깁니다.
+    popup.style.display = 'none';
+  });
+});
+      </script>
+</body>
+</html>

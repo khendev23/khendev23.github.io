@@ -1,0 +1,31 @@
+header {
+    width: 1400px;
+    margin: auto;
+}
+.headBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+}
+
+
+.headBar ul {
+    margin: 0;
+    padding-top: 30px;
+    /* padding-right: 10px; */
+}
+
+.headBar ul li {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.barList a {
+    text-decoration: none;
+    color: lightslategray;
+}

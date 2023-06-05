@@ -1,0 +1,113 @@
+* {
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.wrapper, header, .headBar, .headBar ul, .headBar ul li a, header h1, form, span, input, main {
+    background-color: white;
+}
+header {
+    width: 600px;
+    margin: auto;
+}
+.headBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 600px;
+    height: 100px;
+    margin: auto;
+}
+
+
+.headBar ul {
+    margin: 0;
+    padding-top: 30px;
+    /* padding-right: 10px; */
+}
+
+.headBar ul li {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.barList a {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8;
+}
+
+.formBox {
+    background-color: white;
+    padding-left: 100px;
+    position: relative;
+}
+
+input {
+    height: 40px;
+    border-color: lightgray;
+    outline-color: lightgray;
+    border-radius: 10px;
+    /* align-items: center; */
+    
+}
+
+#userId, #userPw, #userPwCheck, #userName, #userPhone {
+    position: absolute;
+    width: 540px;
+    padding-left: 10px;
+}
+
+#userBirthday {
+    width: 100px;
+}
+
+
+.doubleCheck {
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    background-color: cornflowerblue;
+    color: white;
+    top: 36px;
+    left: 570px;
+    cursor: pointer;
+    border-color: white;
+}
+
+.submit {
+    height: 45px;
+    width: 100px;
+    background-color: cornflowerblue;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit:hover {
+    width: 102px;
+    height: 46px;
+    transition: font-size 0.2s;
+}
+
+.err {
+    font-size: 12px;
+    color: red;
+    display: none;
+}

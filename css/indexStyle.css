@@ -67,7 +67,7 @@ a {
     color: black;
 }
 
-selection {
+section {
     min-height: calc(100% - 200px);
     background-color: lightgray;
     margin: 10px auto;
@@ -107,8 +107,8 @@ selection {
     background-color: white;
 }
 
-.box1 img, .box2 img, .box3 img, .box4 img {
-    max-width: 100%;
+.box2 img, .box3 img, .box4 img {
+    width: 100%;
     height: 400px;
     margin: 0 auto;
     
@@ -118,30 +118,40 @@ selection {
     position: relative;
     width: 100%;
     height: 400px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-
-.box1 .photo, .box2 .photo, .box3 .photo, .box4 .photo{
-    max-width: 100%;
+.box1 .photo {
+    width: 321px;
+    height: 400px;
+    transition: transform 0.3s ease;
+}
+.box2 .photo, .box3 .photo, .box4 .photo{
+    width: 100%;
     height: 400px;
     transition: transform 0.3s ease;
 }
 
-.box1 .caption, .box2 .caption, .box3 .caption, .box4 .caption {
+.caption{
     position:absolute;
     top:200px;
     left: 160px;
-    width:320px;
-    height: 405px;
-    /* padding: 20px; */
+    width:321px;
+    height: 400px;
+    padding-top: 20px;
     text-align:center;
     color:white;
     opacity:0;
     background:rgba(0,0,0,.5);
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translate(-50%, -50%);
 }
 
+.caption h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
 
 .box1:hover .photo, .box2:hover .photo, .box3:hover .photo, .box4:hover .photo {
     transform: scale(1.1);

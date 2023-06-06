@@ -18,32 +18,194 @@
             </ul>
         </div>
     </header>
+
     <section>
         <h1 class="title">Travel</h1>
         <div class="worldMap">
             <img src="/images/worldmap4.png" alt="">
-            <div class="japan">
+            <div class="japan" id="markerJapan">
                 <p class="caption1">Japan</p>
             </div>
-            <div class="philippines">
+            <div class="philippines" id="markerPhilippines">
                 <p class="caption2">Philippines</p>
             </div>
-            <div class="europe">
+            <div class="europe" id="markerEurope">
                 <p class="caption3">Europe</p>
             </div>
         </div>
-        <br>
-        <div class="japanBox">
-            <h1>Japan</h1>
-        </div>
+        <button class="showAll">전체보기</button>
+        <article class="box">
+            <div class="japanBox">
+                <h1>Japan(2019.02.07 - 2019.02.11)</h1>
+                <div class="japanVideo">
+                    <iframe 
+                        src="https://www.youtube.com/embed/g5fkfaztzT4" 
+                        width="1000" height="550" frameborder="0">
+                    </iframe>
+                </div>
+                <div class="japan3d">
+                    <img src="/images/japan1.jpg" alt="" width="500">
+                </div>
+                <div class="route">
+                    <h1>루트</h1>
+                    <span>교토(</span><span>기요미즈데라</span> - <span>금각사</span> - <span>신쿄고쿠</span> - <span>신쿄고쿠</span>) - 오사카(유니버셜 스튜디오 - 도톤보리 - 오사카성)
+                </div>
+                <div class="instaBox">
+                    <br>
+                    <h2>190208</h2>
+                    <div class="japanSecondDay">
+                        <iframe 
+                            width="400" height="500" scrolling = "no"
+                            src="https://www.instagram.com/p/BtmaK1kDY4i/embed" frameborder="0">
+                        </iframe>
+                        <iframe 
+                            width="400" height="500" scrolling = "no"
+                            src="https://www.instagram.com/p/BtoG4GPjlQY/embed" frameborder="0">
+                        </iframe>
+                    </div>
+                    <h2>190209</h2>
+                    <div class="japanThirdDay">
+                        <iframe width="400" height="500" scrolling = "no"
+                            src="https://www.instagram.com/p/Btq0w-7jBlI/embed" frameborder="0">
+                        </iframe>
+                    </div>
+                    <h2>190210</h2>
+                    <div class="japanFourthDay">
+                        <iframe width="400" height="700" scrolling = "no"
+                            src="https://www.instagram.com/p/BtxT2aCjaXc/embed" frameborder="0">
+                        </iframe>
+                        <iframe width="400" height="700" scrolling = "no"
+                            src="https://www.instagram.com/p/BtxX9-0jqCq/embed" frameborder="0">
+                        </iframe>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="box">
+            <div class="philippinesBox">
+                <h1>Philippines(2020.01.12 ~ 2020.01.22)</h1>
+                <iframe 
+                    src="https://youtube.com/embed/FtKpV_T_1og" 
+                    width="1200" height="650" frameborder="0">
+                </iframe>
+            </div>
+            <div class="route">
+                <h1>루트</h1>
+                <span>비콜</span> - <span>세부</span>
+            </div>
+            <div class="bicol">
+                <h1>비콜?</h1>
+                <img src="/images/bicol1.png" alt="">
+                <p>필리핀 루손 섬 남동부에 있는 지방. 마닐라 공항에서 버스로 약 10시간 소요</p>
+            </div>
+            <div class="instaBox">
+                <iframe width="500" height="600" scrolling="no"
+                    src="https://www.instagram.com/p/B76-J1zF33Y/embed" frameborder="0"></iframe>
+            </div>
+        </article>
+
+        <article class="box">
+            <div class="europeBox">
+                <h1>유럽</h1>
+            </div>
+        </article>
     </section>
 
     <footer>
 
     </footer>
+    
     <script>
+        const boxes = document.querySelectorAll(".box");
+        const japan = document.querySelector(".japan");
+        const philippines = document.querySelector(".philippines");
+        const europe = document.querySelector(".europe");
+
+        const showAll = document.querySelector(".showAll");
+
+        let isOpen = false;
+        let japanOpen = false;
+        let philippinesOpen = false;
+        let europeOpen = false;
+
+        for(box of boxes) {
+            box.style.display = "none"
+        }
+
+        showAll.addEventListener('click', () => {
+            japanOpen = false;
+            philippinesOpen = false;
+            europeOpen = false;
+
+            if(!isOpen) {
+                boxes[0].style.display = "block";
+                boxes[1].style.display = "block";
+                boxes[2].style.display = "block";
+                isOpen = true;
+            } else {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "none";
+                isOpen = false;
+            }
+        });
         
-        const hoverJapan = document.querySelector(".japan");
+        japan.addEventListener('click', ()=>{
+            isOpen = false;
+            philippinesOpen = false;
+            europeOpen = false;
+
+            if(!japanOpen) {
+                boxes[0].style.display = "block";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "none";
+                japanOpen = true;
+            } else {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "none";
+                japanOpen = false;
+            }
+        });
+
+        philippines.addEventListener('click', ()=>{
+            isOpen = false;
+            japanOpen = false;
+            europeOpen = false;
+
+            if(!philippinesOpen) {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "block";
+                boxes[2].style.display = "none";
+                philippinesOpen = true;
+            } else {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "none";
+                philippinesOpen = false;
+            }
+        });
+
+        europe.addEventListener('click', () => {
+            isOpen = false;
+            japanOpen = false;
+            philippinesOpen = false;
+
+            if(!europeOpen) {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "block";
+                europeOpen = true;
+            } else {
+                boxes[0].style.display = "none";
+                boxes[1].style.display = "none";
+                boxes[2].style.display = "none";
+                europeOpen = false;
+            }
+        });
 
 
 

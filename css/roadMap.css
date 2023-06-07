@@ -29,3 +29,60 @@ header {
     text-decoration: none;
     color: lightslategray;
 }
+
+.roadmapImage {
+    width: 1350px;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.roadmapImage img {
+    width: 1350px;
+}
+
+.roadmapImage h1 {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+}
+
+.zero, .first, .third, .fifth, .seventh, .tenth{
+    position: absolute;
+    border: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+
+.zero {
+    top: 494px;
+    left: 58px;
+}
+
+.first {
+    top: 255px;
+    left: 267px;
+}
+
+.third {
+    top: 494px;
+    left: 474px;
+}
+
+.fifth {
+    top: 255px;
+    left: 683px;
+}
+
+.seventh {
+    top: 494px;
+    left: 890px;
+}
+
+.tenth {
+    top: 255px;
+    left: 1097px;
+}

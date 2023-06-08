@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
+    font-family: 'GmarketSansMedium';
     box-sizing: border-box;
 }
 
@@ -34,16 +42,16 @@ header {
     color: lightslategray;
 }
 
-selection {
+section {
     width: 1400px;
-    height: 1000px;
+    /* height: 1000px; */
     text-align: center;
     margin: auto;
 }
 
-selection h1 {
+section h1 {
     width: 1400px;
-    font-size: 70px;
+    font-size: 60px;
     margin: auto;
     
 }
@@ -59,7 +67,7 @@ selection h1 {
     margin: auto;
     width: 1400px;
     padding-top: 20px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .introductionBox {
@@ -71,7 +79,7 @@ selection h1 {
 .aboutTitle {
     text-align: left;
     float: left;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 30px;
     
 }
@@ -105,7 +113,7 @@ selection h1 {
 
 .aboutDetail {
     text-align: left;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .detailContents {
@@ -119,6 +127,7 @@ selection h1 {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    position: relative;
 }
 
 .aboutProfile {

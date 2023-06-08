@@ -22,10 +22,11 @@
         <div class="roadmapImage">
             <img src="/images/roadmap1.png" alt="">
             <h1>RoadMap</h1>
+            <h2>방송 & 미디어 전문 개발자 로드맵</h2>
             <div class="zero">
                 <article>
                     <h3>0년차</h3>
-                    <p>수료</p>
+                    <p>KH정보교육원 수료</p>
                     <p>취업</p>
                     <p>정보처리기사</p>
                 </article>
@@ -33,21 +34,60 @@
             <div class="first">
                 <article>
                     <h3>1년차</h3>
+                    <p>회사 시스템 이해</p>
+                    <p>웹 개발 심화 학습</p>
+                    <p>테스트 및 디버깅 기술 습득</p>
+                    <p>CS 학습</p>
+                    <p></p>
                 </article>
             </div>
             <div class="third">
-                <h3>3년차</h3>
+                <article>
+                    <h3>3년차</h3>
+                    <p>실전 프로젝트 경험 쌓기</p>
+                    <p>FFMPEG 개발</p>
+                    <p>성능 최적화 기법 습득</p>
+                </article>
             </div>
             <div class="fifth">
-                <h3>5년차</h3>
+                <article>
+                    <h3>5년차</h3>
+                    <p>전문적 백엔드 기술 영역<br>선택 및 학습</p>
+                    <p>시스템 아키텍처 설계 및<br>개선에 참여</p>
+                    <p>개발자 커뮤니티 참여 및<br> 기술 공유</p>
+                </article>
             </div>
             <div class="seventh">
-                <h3>7년차</h3>
+                <article>
+                    <h3>7년차</h3>
+                    <p>주요 기술 동향과<br>트렌드 파악 및 적용</p>
+                    <p>기술적 리더십 발전</p>
+                    <p>새로운 기술 및 도구에 대한<br>탐구와 평가</p>
+                </article>
             </div>
             <div class="tenth">
-                <h3>10년차</h3>
+                <article>
+                    <h3>10년차</h3>
+                    <p>품질 관리 및 테스트 전략<br>전문성 발전</p>
+                    <p>오픈 소스 기여</p>
+                    <p>기술 전문성의 확장</p>
+                </article>
             </div>
         </div>
     </section>
+    <script>
+        const firstBox = document.querySelector(".first");
+        const thirdBox = document.querySelector(".third");
+        const fifthBox = document.querySelector(".fifth");
+        const seventhBox = document.querySelector(".seventh");
+        const tenthBox = document.querySelector(".tenth");
+
+        const boxes = [firstBox, thirdBox, fifthBox, seventhBox, tenthBox];
+        for(let i = 0; i<boxes.length; i++) {
+            boxes[i].addEventListener('mouseover', () => {
+                boxes[i].style.opacity = '1';
+            })
+        }
+    </script>
 </body>
 </html>

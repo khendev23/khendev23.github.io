@@ -147,9 +147,19 @@ section h4 {
     line-height: 2;
 }
 
-.japanVideo, .japanSecondDay, .japanThirdDay, .japanFourthDay, .japan3d {
+.japanVideo, .japanSecondDay, .japanThirdDay, .japanFourthDay, .japan3d, .philippinesVideo1, .europeVideo, .routeImg {
     display: flex;
     justify-content: center;
+}
+
+.routeImg img{
+    width: 1000px;
+}
+
+.routeImg img:hover {
+    width: 1100px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 iframe {

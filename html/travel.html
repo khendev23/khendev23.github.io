@@ -101,7 +101,7 @@
             </div>
             <div class="bicol">
                 <h1>비콜?</h1>
-                <img src="/images/bicol1.png" alt="">
+                <img src="../images/bicol1.png" alt="">
                 <p>필리핀 루손 섬 남동부에 있는 지방. 마닐라 공항에서 버스로 약 10시간 소요</p>
             </div>
             <div class="instaBox">
@@ -118,7 +118,37 @@
                 </div>
             </div>
             <div class="routeImg">
-                <img src="/images/europemap.jpg" alt="">
+                <img class="europeMap" src="../images/europemap.jpg" alt="">
+                <div class="routeDot" id="rome">
+                    <p class="euroCaption">로마(in)</p>
+                </div>
+                <div class="routeDot" id="firenze">
+                    <p class="euroCaption" id="firenzeCaption">피렌체</p>
+                </div>
+                <div class="routeDot" id="viareggio">
+                    <p class="euroCaption" id="viareggioCaption">비아레조</p>
+                </div>
+                <div class="routeDot" id="venezia">
+                    <p class="euroCaption">베니스</p>
+                </div>
+                <div class="routeDot" id="bled">
+                    <p class="euroCaption" id="bledCaption">블레드</p>
+                </div>
+                <div class="routeDot" id="ljubljana">
+                    <p class="euroCaption" id="ljubljanaCaption">류블라냐</p>
+                </div>
+                <div class="routeDot" id="munich">
+                    <p class="euroCaption">뮌헨</p>
+                </div>
+                <div class="routeDot" id="interlaken">
+                    <p class="euroCaption">인터라켄</p>
+                </div>
+                <div class="routeDot" id="arles">
+                    <p class="euroCaption">아를</p>
+                </div>
+                <div class="routeDot" id="barcelona">
+                    <p class="euroCaption">바르셀로나(out)</p>
+                </div>
             </div>
         </article>
     </section>
@@ -128,6 +158,36 @@
     </footer>
     
     <script>
+
+        const euroMap = document.querySelector(".europeMap");
+        euroMap.addEventListener('mouseover', () => {
+            euroMap.style.width = "1100px";
+            euroMap.style.cursor = 'pointer';
+            euroMap.style.transition = "0.3s ease"
+        })
+
+        euroMap.addEventListener('click', () => {
+            const routeWrapper = document.querySelector(".routeImg")
+            const routeDots = document.querySelectorAll(".routeDot");
+            routeDots.forEach(routeDot => {
+                routeDot.style.display = 'inline'
+            })
+            
+            // document.querySelector("#traveler").remove();
+
+            const traveler = document.createElement('img');
+            traveler.id = 'traveler';
+            traveler.src = "/images/avatar.png";
+            traveler.style.position = "absolute";
+            traveler.style.width = "20px";
+            traveler.style.top = "335px";
+            traveler.style.left = "585px";
+            traveler.style.animation = "route-animation 10s ease infinite";
+
+            routeWrapper.appendChild(traveler);
+
+        })
+
         const boxes = document.querySelectorAll(".box");
         const japan = document.querySelector(".japan");
         const philippines = document.querySelector(".philippines");
@@ -135,86 +195,86 @@
 
         const showAll = document.querySelector(".showAll");
 
-        let isOpen = false;
-        let japanOpen = false;
-        let philippinesOpen = false;
-        let europeOpen = false;
+        // let isOpen = false;
+        // let japanOpen = false;
+        // let philippinesOpen = false;
+        // let europeOpen = false;
 
-        for(box of boxes) {
-            box.style.display = "none"
-        }
+        // for(box of boxes) {
+        //     box.style.display = "none"
+        // }
 
-        showAll.addEventListener('click', () => {
-            japanOpen = false;
-            philippinesOpen = false;
-            europeOpen = false;
+        // showAll.addEventListener('click', () => {
+        //     japanOpen = false;
+        //     philippinesOpen = false;
+        //     europeOpen = false;
 
-            if(!isOpen) {
-                boxes[0].style.display = "block";
-                boxes[1].style.display = "block";
-                boxes[2].style.display = "block";
-                isOpen = true;
-            } else {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "none";
-                isOpen = false;
-            }
-        });
+        //     if(!isOpen) {
+        //         boxes[0].style.display = "block";
+        //         boxes[1].style.display = "block";
+        //         boxes[2].style.display = "block";
+        //         isOpen = true;
+        //     } else {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "none";
+        //         isOpen = false;
+        //     }
+        // });
         
-        japan.addEventListener('click', ()=>{
-            isOpen = false;
-            philippinesOpen = false;
-            europeOpen = false;
+        // japan.addEventListener('click', ()=>{
+        //     isOpen = false;
+        //     philippinesOpen = false;
+        //     europeOpen = false;
 
-            if(!japanOpen) {
-                boxes[0].style.display = "block";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "none";
-                japanOpen = true;
-            } else {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "none";
-                japanOpen = false;
-            }
-        });
+        //     if(!japanOpen) {
+        //         boxes[0].style.display = "block";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "none";
+        //         japanOpen = true;
+        //     } else {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "none";
+        //         japanOpen = false;
+        //     }
+        // });
 
-        philippines.addEventListener('click', ()=>{
-            isOpen = false;
-            japanOpen = false;
-            europeOpen = false;
+        // philippines.addEventListener('click', ()=>{
+        //     isOpen = false;
+        //     japanOpen = false;
+        //     europeOpen = false;
 
-            if(!philippinesOpen) {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "block";
-                boxes[2].style.display = "none";
-                philippinesOpen = true;
-            } else {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "none";
-                philippinesOpen = false;
-            }
-        });
+        //     if(!philippinesOpen) {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "block";
+        //         boxes[2].style.display = "none";
+        //         philippinesOpen = true;
+        //     } else {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "none";
+        //         philippinesOpen = false;
+        //     }
+        // });
 
-        europe.addEventListener('click', () => {
-            isOpen = false;
-            japanOpen = false;
-            philippinesOpen = false;
+        // europe.addEventListener('click', () => {
+        //     isOpen = false;
+        //     japanOpen = false;
+        //     philippinesOpen = false;
 
-            if(!europeOpen) {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "block";
-                europeOpen = true;
-            } else {
-                boxes[0].style.display = "none";
-                boxes[1].style.display = "none";
-                boxes[2].style.display = "none";
-                europeOpen = false;
-            }
-        });
+        //     if(!europeOpen) {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "block";
+        //         europeOpen = true;
+        //     } else {
+        //         boxes[0].style.display = "none";
+        //         boxes[1].style.display = "none";
+        //         boxes[2].style.display = "none";
+        //         europeOpen = false;
+        //     }
+        // });
 
 
 

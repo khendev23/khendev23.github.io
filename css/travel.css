@@ -152,18 +152,154 @@ section h4 {
     justify-content: center;
 }
 
+.routeImg {
+    position: relative;
+    align-items: center;
+}
 .routeImg img{
     width: 1000px;
 }
 
-.routeImg img:hover {
+/* .routeImg img:hover {
     width: 1100px;
     cursor: pointer;
     transition: 0.3s ease;
-}
+} */
 
 iframe {
     border: 1px solid black;
     border-radius: 15px;
     margin: 20px;
+}
+
+.europeMap {
+    /* position: relative; */
+    /* display: flex; */
+}
+.routeDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    display: none;
+    font-size: 12px;
+}
+
+#rome {
+    top: 340px;
+    left: 590px;
+}
+
+#firenze {
+    top: 290px;
+    left: 555px;
+}
+
+#viareggio {
+    top:285px;
+    left: 530px;
+}
+
+#venezia {
+    top: 250px;
+    left: 575px;
+}
+
+#bled {
+    top: 230px;
+    left: 605px;
+}
+
+#ljubljana {
+    top: 235px;
+    left: 620px;
+}
+
+#munich {
+    top: 180px;
+    left: 565px;
+}
+
+#interlaken {
+    top: 217px;
+    left: 490px;
+}
+
+#arles {
+    top: 300px;
+    left: 430px;
+}
+
+#barcelona {
+    top: 348px;
+    left: 370px;
+}
+
+.euroCaption {
+    position: relative;
+    width: 100px;
+    left: -43px;
+    text-align: center;
+}
+
+#viareggioCaption {
+    top: -27px;
+    left: -60px;
+}
+
+#bledCaption {
+    top: -25px;
+    left: -60px;
+}
+
+@keyframes route-animation {
+    10% {
+        top: 280px;
+        left: 550px;
+    }
+
+    20% {
+        top:275px;
+        left: 525px;
+    }
+
+    30% {
+        top: 240px;
+        left: 570px;
+    }
+
+    40% {
+        top: 220px;
+        left: 595px;
+    }
+
+    50% {
+        top: 225px;
+        left: 618px;
+    }
+
+    60% {
+        top: 170px;
+        left: 560px;
+    }
+
+    70% {
+        top: 210px;
+        left: 485px;
+    }
+
+    80% {
+        top: 290px;
+        left: 425px;
+    }
+
+    90% {
+        top: 340px;
+        left: 365px;
+    }
+
+    100% {
+
+    }
 }

@@ -79,6 +79,10 @@ input {
     padding-left: 10px;
 }
 
+#emailId, #emailUrl {
+    padding-left: 10px;
+}
+
 #userBirthday {
     width: 100px;
 }

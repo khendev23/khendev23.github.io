@@ -33,7 +33,7 @@
                     <span id="spanPw">비밀번호</span>
                     <span class="err" id="pwErr"></span>
                     <br>
-                    <input type="password"  name="userPw" id="userPw" placeholder="비밀번호 입력 (숫자, 문자, 특수문자(*!&) 포함 8~15자리)">
+                    <input type="password"  name="userPw" id="userPw" placeholder="비밀번호 입력 (숫자, 문자, 특수문자(!@#$%^&*) 포함 8~15자리)">
                     <br><br>
                     <span id="spanPwCheck">비밀번호 확인 </span>
                     <span class="err" id="pwCheckErr"></span>
@@ -83,9 +83,51 @@
         const submit = document.querySelector(".submit");
         const email = emailId.value + '@' + emailUrl.value;
 
+        // 제출시 유효성 검사
         // localStorage에 가입정보 저장
-        
-        const saveSignUp = () => {
+        const saveSignUp = (e) => {
+
+            if((!/^[a-z]/.test(userId.value)) || (!/\d/.test(userId.value)) || (!/^.{4,12}$/.test(userId.value))) {
+                alert('아이디가 유효하지 않습니다.');
+                e.preventDefault();
+                return; // 이하 코드 실행 방지용
+            };
+
+            if( ((!/\w/.test(userPw.value)) || (!/\d/.test(userPw.value)) || (!/[!@#$%^&*]/.test(userPw.value)) || (!/^.{8,15}$/.test(userPw.value))) ){
+                alert('비밀번호가 유효하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
+
+            if( (userPw.value != userPwCheck.value) ) {
+                alert('비밀번호가 일치하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
+
+            if( ((!/^.{2,}$/.test(userName.value)) || (!/[가-힣]/.test(userName.value))) ) {
+                alert('이름이 유효하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
+
+            if( ((!/^(010|011)/.test(userPhone.value)) || (!/\d/.test(userPhone.value)) || (!/^.{10,11}$/.test(userPhone.value))) ) {
+                alert('휴대폰 번호가 유효하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
+
+            if( ((!/^[a-z]/.test(emailId.value)) || (!/\d/.test(emailId.value)) || (!/^.{4,12}$/.test(userPhone.value))) ) {
+                alert('이메일이 유효하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
+
+            if( ((!/^[a-z]/.test(emailUrl.value)) || (!/\./.test(emailUrl.value))) ) {
+                alert('이메일이 유효하지 않습니다.');
+                e.preventDefault();
+                return;
+            };
             alert('가입 성공!');
 
             const frm = document.signUpFrm;
@@ -114,54 +156,8 @@
                 this.userPhone = userPhone;
                 this.userBirthday = userBirthday;
                 this.email = email;
-
             }
         };
-
-        // 제출 시 유효성 검사
-        submit.onsubmit = (e) => {
-            if((!/^[a-z]/.test(userId.value)) || (!/\d/.test(userId.value)) || (!/^.{4,12}$/.test(userId.value))) {
-                alert('아이디가 유효하지 않습니다.');
-                e.preventDefault();
-                return; // 이하 코드 실행 방지용
-            };
-
-            if( ((!/\w/) || (!/\d/) || (!/[!@#$%^&*]/) || (!/^.{8,15}$/)).test(userPw.value) ){
-                alert('비밀번호가 유효하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-
-            if( (userPw.value != userPwCheck.value) ) {
-                alert('비밀번호가 일치하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-
-            if( ((!/^.{2,}$/) || (!/[가-힣]/)).test(userName.value) ) {
-                alert('이름이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-
-            if( ((!/^(010|011)/) || (!/\d/) || (!/^.{10,11}$/)).test(userPhone.value) ) {
-                alert('휴대폰 번호가 유효하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-
-            if( ((!/^[a-z]/) || (!/\d/) || (!/^.{4,12}$/)).test(emailId.value) ) {
-                alert('이메일이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-
-            if( ((!/^[a-z]/) || (!/\./)).test(emailUrl.value) ) {
-                alert('이메일이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
-            };
-        }
 
         // 실시간 유효성 검사
         // ID 유효성 검사
@@ -196,7 +192,7 @@
             const pwdValidations = [
                 {re : /\w/, msg : '문자를 하나이상 포함해야합니다.'},
                 {re : /\d/, msg : '숫자를 하나이상 포함해야합니다.'},
-                {re : /[!@#$%^&*]/, msg : '특수문자를 하나이상 포함해야합니다.'},
+                {re : /[!@#$%^&*]/, msg : '특수문자(!@#$%^&*)를 하나이상 포함해야합니다.'},
                 {re : /^.{8,15}$/, msg : '비밀번호 길이는 8~15자리 입니다.'},
             ];
 

@@ -139,7 +139,7 @@ section h4 {
     cursor: pointer;
 }
 
-.box, .japanBox, .philippinesBox, .europeBox {
+.box, .box2, .japanBox, .philippinesBox, .europeBox {
     width: 1200px;
 }
 .japanBox {
@@ -172,10 +172,10 @@ iframe {
     margin: 20px;
 }
 
-.europeMap {
+/* .europeMap { */
     /* position: relative; */
     /* display: flex; */
-}
+/* } */
 .routeDot {
     width: 10px;
     height: 10px;
@@ -183,56 +183,56 @@ iframe {
     background-color: black;
     position: absolute;
     display: none;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #rome {
-    top: 340px;
-    left: 590px;
+    top: 305px;
+    left: 615px;
 }
 
 #firenze {
-    top: 290px;
-    left: 555px;
+    top: 260px;
+    left: 590px;
 }
 
 #viareggio {
-    top:285px;
-    left: 530px;
+    top:250px;
+    left: 560px;
 }
 
 #venezia {
-    top: 250px;
-    left: 575px;
+    top: 210px;
+    left: 610px;
 }
 
 #bled {
-    top: 230px;
-    left: 605px;
+    top: 180px;
+    left: 645px;
 }
 
 #ljubljana {
-    top: 235px;
-    left: 620px;
+    top: 190px;
+    left: 660px;
 }
 
 #munich {
-    top: 180px;
-    left: 565px;
+    top: 125px;
+    left: 595px;
 }
 
 #interlaken {
-    top: 217px;
-    left: 490px;
+    top: 162px;
+    left: 510px;
 }
 
 #arles {
-    top: 300px;
-    left: 430px;
+    top: 260px;
+    left: 440px;
 }
 
 #barcelona {
-    top: 348px;
+    top: 320px;
     left: 370px;
 }
 
@@ -244,62 +244,88 @@ iframe {
 }
 
 #viareggioCaption {
-    top: -27px;
+    top: -33px;
     left: -60px;
 }
 
 #bledCaption {
-    top: -25px;
+    top: -30px;
     left: -60px;
 }
 
 @keyframes route-animation {
     10% {
-        top: 280px;
-        left: 550px;
+        top: 250px;
+        left: 585px;
     }
 
     20% {
-        top:275px;
-        left: 525px;
+        top:240px;
+        left: 555px;
     }
 
     30% {
-        top: 240px;
-        left: 570px;
+        top: 200px;
+        left: 606px;
     }
 
     40% {
-        top: 220px;
-        left: 595px;
+        top: 170px;
+        left: 640px;
     }
 
     50% {
-        top: 225px;
-        left: 618px;
+        top: 175px;
+        left: 655px;
     }
 
     60% {
-        top: 170px;
-        left: 560px;
+        top: 110px;
+        left: 590px;
     }
 
     70% {
-        top: 210px;
-        left: 485px;
+        top: 150px;
+        left: 505px;
     }
 
     80% {
-        top: 290px;
-        left: 425px;
+        top: 250px;
+        left: 435px;
     }
 
     90% {
-        top: 340px;
+        top: 310px;
         left: 365px;
+        display: none;
     }
 
-    100% {
-
-    }
+    
 }
+
+.roma, .fiorentina, .carnival, .venice, .bledLake, .slovenia, .munchen1, .munchen2, .barca1, .barca2 {
+    width: 1200px;
+    justify-content: center;
+    display: flex;
+}
+
+.romeImg, .firenzeImg, .viaImg, .veniceImg, .bledImg, .sloveniaImg, .munuchImg, .barcelonaImg {
+    width: 320px;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.romeInsta, .firenzeInsta, .viaInsta, .veneziaInsta, .bledInsta, .munuchInsta, .interakenInsta, .barcelonaInsta {
+    width: 1200px;
+    justify-content: space-around;
+    display: flex;
+}
+
+#box2 img {
+    width: 100%;
+}
+
+/* .romeInsta {
+    width: 1200px;
+    padding-left: 330px;
+} */

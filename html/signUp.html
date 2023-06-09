@@ -81,7 +81,7 @@
         const emailUrl = document.querySelector("#emailUrl");
         const userBirthday = document.querySelector("#userBirthday");
         const submit = document.querySelector(".submit");
-        const email = emailId.value + '@' + emailUrl.value;
+        // const email = emailId.value + '@' + emailUrl.value;
 
         // 제출시 유효성 검사
         // localStorage에 가입정보 저장
@@ -89,50 +89,44 @@
 
             if((!/^[a-z]/.test(userId.value)) || (!/\d/.test(userId.value)) || (!/^.{4,12}$/.test(userId.value))) {
                 alert('아이디가 유효하지 않습니다.');
-                e.preventDefault();
-                return; // 이하 코드 실행 방지용
+                return false; // 이하 코드 실행 방지용
             };
 
             if( ((!/\w/.test(userPw.value)) || (!/\d/.test(userPw.value)) || (!/[!@#$%^&*]/.test(userPw.value)) || (!/^.{8,15}$/.test(userPw.value))) ){
                 alert('비밀번호가 유효하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
 
             if( (userPw.value != userPwCheck.value) ) {
                 alert('비밀번호가 일치하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
 
             if( ((!/^.{2,}$/.test(userName.value)) || (!/[가-힣]/.test(userName.value))) ) {
                 alert('이름이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
 
             if( ((!/^(010|011)/.test(userPhone.value)) || (!/\d/.test(userPhone.value)) || (!/^.{10,11}$/.test(userPhone.value))) ) {
                 alert('휴대폰 번호가 유효하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
 
-            if( ((!/^[a-z]/.test(emailId.value)) || (!/\d/.test(emailId.value)) || (!/^.{4,12}$/.test(userPhone.value))) ) {
+            if( ((!/^[a-z]/.test(emailId.value)) || (!/\d/.test(emailId.value)) || (!/^.{4,12}$/.test(emailId.value))) ) {
                 alert('이메일이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
 
             if( ((!/^[a-z]/.test(emailUrl.value)) || (!/\./.test(emailUrl.value))) ) {
                 alert('이메일이 유효하지 않습니다.');
-                e.preventDefault();
-                return;
+                return false;
             };
+
             alert('가입 성공!');
 
             const frm = document.signUpFrm;
             
-            const user = new User(userId.value, userPw.value, userName.value, userPhone.value, userBirthday.value, email);
+            const user = new User(userId.value, userPw.value, userName.value, userPhone.value, userBirthday.value, email = emailId.value + '@' + emailUrl.value);
             const users = JSON.parse(localStorage.getItem('users')) || [];
             users.push(user);
             const jsonStr = JSON.stringify(users);
@@ -149,13 +143,15 @@
         };
         
         class User {
-            constructor(userId, userPw, userName, userPhone, userBirthday, email) {
+            constructor(userId, userPw, userName, userPhone, userBirthday, email, emailId, emailUrl) {
                 this.userId = userId;
                 this.userPw = userPw;
                 this.userName = userName;
                 this.userPhone = userPhone;
                 this.userBirthday = userBirthday;
                 this.email = email;
+                this.emailId = emailId;
+                this.emailUrl = emailUrl;
             }
         };
 

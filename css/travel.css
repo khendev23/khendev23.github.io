@@ -189,6 +189,7 @@ section h4 {
     display: flex;
     justify-content: center;
     transition: 0.5s opacity ease;
+    border: 1px solid black;
 }
 
 .kiyoHide, .goldHide, .mallHide, .foxHide, .studioHide, .harukasHide, .dotonHide, .umedaHide, .castleHide {

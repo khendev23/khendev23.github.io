@@ -149,7 +149,7 @@ section h4 {
 
 .japanVideo, .japanSecondDay, .japanThirdDay, .japanFourthDay, .japan3d, .philippinesVideo1, .europeVideo, .routeImg {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .routeImg {
@@ -160,6 +160,44 @@ section h4 {
     width: 1000px;
 }
 
+.route span {
+    cursor: pointer;
+}
+
+.japanmapBox {
+    display: flex;
+    justify-content: center;
+}
+
+.kyotomap{
+    width: 500px;
+    margin: 0 30px;
+}
+
+.osakamap {
+    width: 535px;
+    margin: 0 30px;
+}
+.kyotomap img, .osakamap img{
+    width: 100%;
+}
+
+#kiyoBox, #goldBox, #mallBox, #foxBox, #studioBox, #harukasBox, #dotonBox, #umedaBox, #castleBox{
+    position: absolute;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s opacity ease;
+}
+
+.kiyoHide, .goldHide, .mallHide, .foxHide, .studioHide, .harukasHide, .dotonHide, .umedaHide, .castleHide {
+    opacity: 0;
+}
+
+.kiyoShow, .goldShow, .mallShow, .foxShow, .studioShow, .harukasShow, .dotonShow, .umedaShow, .castleShow {
+    opacity: 1;
+}
 /* .routeImg img:hover {
     width: 1100px;
     cursor: pointer;
@@ -329,3 +367,13 @@ iframe {
     width: 1200px;
     padding-left: 330px;
 } */
+
+.footer_box {
+    position: relative;
+    width: 1400px;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+}

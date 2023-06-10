@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>roadMap</title>
     <link rel="stylesheet" href="/css/roadMap.css">
+    <script src="../js/jquery-3.7.0.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
             </ul>
         </div>
     </header>
-    <section>
+    <section class="section">
         <div class="roadmapImage">
             <img src="/images/roadmap1.png" alt="">
             <h1>RoadMap</h1>
@@ -45,7 +46,7 @@
                 <article>
                     <h3>3년차</h3>
                     <p>실전 프로젝트 경험 쌓기</p>
-                    <p>FFMPEG 기반 <br>디코더, 트랜스코더 개발</p>
+                    <p style="cursor: pointer;" class="ffmpeg">FFMPEG 기반 <br>디코더, 트랜스코더 개발</p>
                     <p>성능 최적화 기법 습득</p>
                 </article>
             </div>
@@ -75,6 +76,12 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer_box">
+            <p>Copyright © 2023-2023 About SKY All Right Reserved</p>
+        </div>
+    </footer>
     <script>
         const firstBox = document.querySelector(".first");
         const thirdBox = document.querySelector(".third");
@@ -88,6 +95,21 @@
                 boxes[i].style.opacity = '1';
             })
         }
+
+        let isOpen = false;
+        $(".ffmpeg").click(() => {
+            const ffmpegBox = document.createElement('div');
+            ffmpegBox.id = 'ffmpegBox';
+            ffmpegBox.innerHTML = `
+            <h3>FFMPEG?</h3>
+            <p>마이클 니더마이어(Michael Niedermayer)의 주도하에 개발되고 있는 모든 동영상, 음악, 사진 포맷들의 디코딩과 인코딩을 목표로 만들어지고 있는 오픈 소스</p>`;
+            if(!isOpen) {
+                $(".section").append(ffmpegBox);
+                isOpen = true;
+            }
+        })
+
+
     </script>
 </body>
 </html>

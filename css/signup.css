@@ -123,3 +123,14 @@ input {
     color: red;
     display: none;
 }
+
+.footer_box {
+    position: relative;
+    width: 1400px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+}

@@ -41,7 +41,7 @@ header {
     color: lightslategray;
 }
 
-.roadmapImage {
+.roadmapImage{
     width: 1350px;
     justify-content: center;
     margin: auto;
@@ -49,6 +49,12 @@ header {
     display: flex;
 }
 
+#ffmpegBox {
+    width: 1350px;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
 .roadmapImage img {
     width: 1350px;
 }
@@ -115,3 +121,13 @@ header {
 /* div:hover {
     opacity: 1;
 } */
+
+.footer_box {
+    position: relative;
+    width: 1400px;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+}

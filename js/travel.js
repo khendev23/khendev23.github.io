@@ -229,7 +229,7 @@ const travelSpots = [
         element : '.doton',
         images : [
             {
-                src: '../images/japan/doton1.JPG',
+                src: '../images/japan/doton1.jpg',
                 alt: '이치란 라멘'
             },
             {

@@ -192,11 +192,21 @@ section h4 {
     border: 1px solid black;
 }
 
-.kiyoHide, .goldHide, .mallHide, .foxHide, .studioHide, .harukasHide, .dotonHide, .umedaHide, .castleHide {
+#travelSpotBox {
+    position: absolute;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s opacity ease;
+    border: 1px solid black;
+}
+
+.hide {
     opacity: 0;
 }
 
-.kiyoShow, .goldShow, .mallShow, .foxShow, .studioShow, .harukasShow, .dotonShow, .umedaShow, .castleShow {
+.show {
     opacity: 1;
 }
 /* .routeImg img:hover {
@@ -336,7 +346,6 @@ iframe {
     90% {
         top: 310px;
         left: 365px;
-        display: none;
     }
 
     

@@ -1,0 +1,400 @@
+/* common */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+	list-style-position: inside;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+img {
+	display: block;
+	width: 100%;
+}
+
+/* style */
+.wrapper {
+	margin-left: 60px;
+	position: relative;
+	background: #fff;
+}
+
+.nav {
+	width: 280px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 200px 40px;
+	background-color: #374259;
+}
+
+/* .nav-top {
+	height: 20px;
+	display: fixed;
+	justify-content: flex-end;
+	background: #F2D8D8;
+} */
+
+.nav .profile_img {
+	width: 180px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	background: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.nav ul li.on a {
+	color: #5C8984;
+}
+
+/* { max-width:1024px;} */
+
+/* 왼쪽 사이드바 폰트 */
+@font-face {
+	font-family: 'Blinker-Bold';
+	src: url('../font/Blinker-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Blinker-Light';
+	src: url('../font/Blinker-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NanumSquareL';
+	src: url('../font/NanumSquareL.otf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NanumSquareB';
+	src: url('../font/NanumSquareB.otf') format('truetype');
+}
+
+.font {
+	font-family: "Blinker-Bold";
+	font-size: 170%;
+	line-height: 50px;
+	text-align: center;
+	color: #374259;
+}
+
+.font2 {
+	font-family: "Blinker-Bold";
+	font-size: 170%;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+}
+
+
+/* 회원가입, 로그인 버튼 */
+.utility {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 10px 100px;
+	padding-top: 60px;
+}
+
+/* 상단 스크롤바 */
+.container .progress_container {
+	width: calc(100% - 450px);
+	height: 4px;
+	position: fixed;
+	top: 30px;
+	right: 0;
+	margin-right: 100px;
+	background: #f1f1f1;
+}
+
+/* 상단 스크롤바 게이지*/
+.container .progress_container .progress_bar {
+	width: 0%;
+	height: 100%;
+	background: #5C8984;
+}
+
+/* 상단 스크롤바 호두 얼굴 */
+.container .progress_container .hodu_img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 40px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	transform: translate(-50%, -50%)
+}
+
+.container .progress_container .hodu_img img {
+	object-fit: cover;
+	height: 100%;
+}
+
+.container .bar_color {
+	width: 100%;
+	contain: fixed;
+	position: fixed;
+	padding: 15px;
+	margin-left: 300px;
+	background-color: #fff;
+}
+
+
+/* 섹션 중간중간 회색 선 */
+.container .section+.section {
+	border-top: 1px solid #E6E6E6;
+}
+
+
+/* 각 페이지 섹션 */
+.container .section_1 {
+	padding: 360px 300px;
+	height: 900px;
+	border-top: 1px solid #E6E6E6;
+}
+
+.container .section_2 {
+	padding: 100px 300px;
+	border-top: 1px solid #E6E6E6;
+}
+
+.container .section_3 {
+	padding: 100px 300px;
+	border-top: 1px solid #E6E6E6;
+}
+
+/* home */
+.social {
+	display: flex;
+	margin-top: 50px;
+	align-items: center; text-align: center; gap: 40px;
+}
+
+.social li a{
+	width: 70px;
+	/* margin-right: 20px; */
+	/* margin-top: 10px; */
+	text-align: center;
+}
+
+.sub_title {
+	font-family: 'Blinker-Light';
+	font-weight: 600;
+	font-size: 150%;
+	color: #646464;
+	margin-top: -160px;
+}
+
+.title {
+	font-family: "Blinker-Bold";
+	font-size: 600%;
+	margin-top: -14px;
+	color: #374259;
+}
+
+.content span {
+	color: #5C8984
+}
+
+.kh_date {
+	font-family: 'NanumSquareB';
+	font-size: 90%;
+	color: #5C8984;
+}
+
+.kh_java {
+	font-family: 'NanumSquareL';
+	font-weight: 100;
+	font-size: 83%;
+	color: #3c3c3c;
+	margin-left: 32px;
+	margin-top: -30px;
+}
+
+/* about */
+.basicBox h3, .profile h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.profile {
+	display: grid;
+}
+
+.inu, .infoProcess, .wireless, .khedu, .rokn, .mbc, .back, .front, .tools {
+	display: flex;
+	/* gap: 100px; */
+}
+
+.duration {
+	font-size: 14px;
+	color: lightslategray;
+}
+
+.title2 li{
+	font-size: 16px;
+}
+
+.listTitle {
+	font-weight: 600;
+}
+
+.boxOne {
+	width: 300px;
+}
+
+.boxTwo {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.boxTwo ul {
+	list-style-position: inside;
+}
+.career ul {
+	list-style: disc;
+}
+/* top button */
+.to_top_btn {
+	position: fixed;
+	width: 50px;
+	bottom: 40px;
+	right: 90px;
+	cursor: pointer;
+}
+
+/* 각 페이지 타이틀 폰트*/
+.title2 {
+	font-family: "Blinker-Bold";
+	font-size: 350%;
+	text-align: left;
+	margin-top: -5px;
+	color: #374259;
+}
+
+.profile {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 각 페이지 부제목 폰트*/
+.title3 {
+	font-family: "Blinker-Bold";
+	font-size: 180%;
+	line-height: 45px;
+	margin-top: 30px;
+	color: #5C8984;
+}
+
+/* 홈 본문 폰트 */
+.desc0 {
+	font-family: "NanumSquareL";
+	font-size: 125%;
+	margin-top: 40px;
+	line-height: 170%;
+}
+
+/* 나머지 본문 폰트 */
+.desc {
+	font-family: "NanumSquareL";
+	font-size: 100%;
+	margin-top: 10px;
+	line-height: 170%;
+}
+
+.content strong {
+	font-weight: bold;
+	font-size: 125%;
+	color: #374259;
+}
+
+/* ROADMAP */
+.ROADMAP {
+	width: 70%;
+	margin-left: -50px;
+	margin-top: 10px;
+}
+
+/* TECH STACK */
+.TeachStack {
+	width: 150%;
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.TeachStack .java_1 {
+	width: 65px;
+	height: 3px;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+.career li {
+	position: relative;
+}
+
+li::marker {
+	/* content: ""; */
+	display: inline-block;
+	position: relative;
+}
+
+.homepage {
+	border: 1px solid lightslategray;
+	border-radius: 15px;
+	width: 120px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}

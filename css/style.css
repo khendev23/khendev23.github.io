@@ -59,7 +59,7 @@ img {
 }
 
 .nav {
-	width: 280px;
+	width: 15%;
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -150,23 +150,23 @@ section {
 }
 
 .container .section_1 {
-	padding: 360px 300px;
+	padding: 360px 15%;
 	height: 950px;
 	border-top: 1px solid #E6E6E6;
 }
 
 .container .section_2 {
-	padding: 100px 300px;
+	padding: 100px 15%;
 	border-top: 1px solid #E6E6E6;
 }
 
 .container .section_3 {
-	padding: 100px 300px;
+	padding: 100px 15%;
 	border-top: 1px solid #E6E6E6;
 }
 
 .content {
-	width: 800px;
+	width: 80%;
 }
 
 /* home */

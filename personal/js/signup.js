@@ -93,7 +93,7 @@ const validateUserId = () => {
     const value = userId.value;
 
     const idValidations = [
-        {re : /^[a-z]/, msg : '첫글자는 반드시 영소문자로 이루어져야합니다.'},
+        {re : /^[a-z]/, msg : '첫글자는 반드시 영어소문자로 이루어져야합니다.'},
         {re : /\d/, msg : '숫자를 하나이상 포함해야합니다.'},
         {re : /^.{4,12}$/, msg : '아이디 길이는 4~12자리 입니다.'},
     ];

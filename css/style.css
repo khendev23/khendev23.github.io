@@ -146,12 +146,12 @@ img {
 
 /* 각 페이지 섹션 */
 section {
-	width: 1000px;
+	width: 1300px;
 }
 
 .container .section_1 {
 	padding: 360px 15%;
-	height: 950px;
+	height: 1050px;
 	border-top: 1px solid #E6E6E6;
 }
 
